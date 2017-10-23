@@ -89,4 +89,24 @@
       <version>${project.version}</version>
     </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>jellydoc-generation</id>
+      <activation>
+        <file>
+          <exists>${basedir}/src/main/java</exists>
+        </file>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.jvnet.maven-jellydoc-plugin</groupId>
+            <artifactId>maven-jellydoc-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

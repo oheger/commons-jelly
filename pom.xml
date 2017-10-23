@@ -365,6 +365,20 @@
             <xdocDirectory>${basedir}/src/site/xdocs</xdocDirectory>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.jvnet.maven-jellydoc-plugin</groupId>
+          <artifactId>maven-jellydoc-plugin</artifactId>
+          <version>1.4</version>
+          <dependencies>
+            <dependency>
+              <groupId>com.sun</groupId>
+              <artifactId>tools</artifactId>
+              <version>1.5</version>
+              <scope>system</scope>
+              <systemPath>${java.home}/../lib/tools.jar</systemPath>
+            </dependency>
+          </dependencies>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
@@ -476,7 +490,6 @@
       <plugin>
         <groupId>org.jvnet.maven-jellydoc-plugin</groupId>
         <artifactId>maven-jellydoc-plugin</artifactId>
-        <version>1.4</version>
       </plugin>
       <plugin>
         <artifactId>maven-jxr-plugin</artifactId>
