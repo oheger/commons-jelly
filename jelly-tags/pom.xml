@@ -57,7 +57,7 @@
     <module>quartz</module>
     <module>regexp</module>
     <module>soap</module>
-    <module>sql</module>
+<!--    <module>sql</module> Temporarily removed due to compilation problems -->
     <module>swing</module>
     <module>swt</module>
     <module>threads</module>
