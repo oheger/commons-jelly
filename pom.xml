@@ -368,7 +368,7 @@
         <plugin>
           <groupId>org.jvnet.maven-jellydoc-plugin</groupId>
           <artifactId>maven-jellydoc-plugin</artifactId>
-          <version>1.4</version>
+          <version>1.5</version>
           <dependencies>
             <dependency>
               <groupId>com.sun</groupId>
@@ -520,6 +520,14 @@
       </plugin>
     </plugins>
   </reporting>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>jelly-releases</id>
+      <name>Jelly releases</name>
+      <url>http://repo.jenkins-ci.org/releases/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <profiles>
     <profile>
