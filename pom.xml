@@ -359,18 +359,14 @@
             </archive>
           </configuration>
         </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <configuration>
+            <xdocDirectory>${basedir}/src/site/xdocs</xdocDirectory>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
-    <plugins>
-      <plugin>
-        <artifactId>maven-site-plugin</artifactId>
-        <configuration>
-          <moduleExcludes>
-            <xdoc>navigation.xml,changes.xml</xdoc>
-          </moduleExcludes>
-        </configuration>
-      </plugin>
-    </plugins>
   </build>
   <distributionManagement>
     <repository>
@@ -457,7 +453,7 @@
         <artifactId>maven-changes-plugin</artifactId>
         <configuration>
           <issueLinkTemplate>http://issues.apache.org/jira/browse/%ISSUE%</issueLinkTemplate>
-          <xmlPath>${basedir}/xdocs/changes.xml</xmlPath>
+          <xmlPath>src/site/xdocs/changes.xml</xmlPath>
         </configuration>
         <reportSets>
           <reportSet>
